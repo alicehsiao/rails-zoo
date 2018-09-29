@@ -1,0 +1,17 @@
+<h1><%= @animal.name %></h1>
+<strong>Details</strong>
+<p>
+  Age: <%= @animal.age %>
+</p>
+<p>
+  Species: <%= @animal.species %>
+</p>
+<p>
+  <%= link_to "Home", root_path %>
+</p>
+<p>
+  <%= link_to "Edit Animal", edit_animal_path(@animal.id) %>
+</p>
+<p>
+  <%= link_to "Delete Animal", animal_path(@animal.id), method: :delete, data: {confirm: "Are you sure?"} %>
+</p>

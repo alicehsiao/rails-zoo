@@ -1,0 +1,13 @@
+<h1>Welcome to the Ada Zoo</h1>
+<h3>Below are the list of all animals</h3>
+<ul>
+  <% @animals.each do |animal| %>
+    <li>
+      <%= link_to animal.name, animal_path(animal.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "Add animal", new_animal_path %>
+</p>
